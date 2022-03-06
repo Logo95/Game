@@ -20,20 +20,16 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         if(hit) return;
-        Vector3 movementSpeed = speed * Time.deltaTime * direction;
+        Vector3 movementSpeed = speed * Time.deltaTime*direction;
         transform.Translate(movementSpeed);
         lifetime+= Time.deltaTime;
         if (lifetime>5) Deactivate();
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag != "Bullet")
-        {
-            hit = true;
-            //anim.SetTrigger("explode");
-            Deactivate();// нужно деактивировать в конце анимации
-        }
-        
+        hit = true;
+        //anim.SetTrigger("explode");
+        Deactivate();// нужно деактивировать в конце анимации
     }
     public void BulletCreator(Vector3 _direction, float _speed)
     {
@@ -41,6 +37,7 @@ public class Bullet : MonoBehaviour
         hit = false;
         lifetime = 0;
         speed = _speed;
+       
     }
     private void Deactivate()
     {
