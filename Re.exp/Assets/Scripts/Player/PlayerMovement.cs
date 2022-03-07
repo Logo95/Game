@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public Vector3 mouseDir;
 
 
-
     void FixedUpdate(){
         ProcessInputs();
         ProcessMousePos();
@@ -32,12 +31,15 @@ public class PlayerMovement : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(mouse);
         RaycastHit rHit;
         Vector3 mousePos = new Vector3(0,0,0);
-        if (Physics.Raycast(ray, out rHit, 100)) {
+        if (Physics.Raycast(ray, out rHit, 100, 1 << 6)) { // 6 is a layer of the map.
             mousePos = rHit.point;
         }
+        
         mouseDir = mousePos - transform.position;
         mouseDir.y = 0;
-        transform.LookAt(transform.position + mouseDir, Vector3.up);
+        
+        transform.LookAt(transform.position + mouseDir * 10, Vector3.up);
+        //transform.rotation = Quaternion.LookRotation(mouseDir);
 
     }
     

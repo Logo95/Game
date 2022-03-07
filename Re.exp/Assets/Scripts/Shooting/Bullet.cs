@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private float speed;
+    private Vector3 speedVector;
     private Vector3 direction;
     private bool hit;
     private SphereCollider sphereCollider;
@@ -17,26 +17,28 @@ public class Bullet : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         if(hit) return;
-        Vector3 movementSpeed = speed * Time.deltaTime*direction;
-        transform.Translate(movementSpeed);
-        lifetime+= Time.deltaTime;
-        if (lifetime>5) Deactivate();
+        transform.Translate(speedVector);
+        lifetime += Time.deltaTime;
+        if (lifetime > 3) Deactivate();
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
+        if (other.tag != "Bullet"){
         hit = true;
         //anim.SetTrigger("explode");
         Deactivate();// нужно деактивировать в конце анимации
+        }
+        
     }
     public void BulletCreator(Vector3 _direction, float _speed)
     {
         direction = _direction;
         hit = false;
         lifetime = 0;
-        speed = _speed;
+        speedVector = _speed * Time.deltaTime * direction;
        
     }
     private void Deactivate()

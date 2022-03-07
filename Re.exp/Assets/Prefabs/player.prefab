@@ -98,7 +98,6 @@ MonoBehaviour:
   rb: {fileID: 1217169409}
   moveDirection: {x: 0, y: 0, z: 0}
   mouseDir: {x: 0, y: 0, z: 0}
-  cam: {fileID: 0}
 --- !u!114 &1217169414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +113,6 @@ MonoBehaviour:
   speed: 40
   bullet: {fileID: 9093702297862516386, guid: 1cb5e7d4c476160448e60db70c2ca538, type: 3}
   playerMovement: {fileID: 1217169410}
-  fireRate: 1
 --- !u!114 &6415599874573105452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,3 +147,16 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &8495230485261108874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231236038457410058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.02}
+  m_Center: {x: 0, y: 0, z: 0}
