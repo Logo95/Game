@@ -15,26 +15,35 @@ public class GunController : MonoBehaviour
     private float delay;
     private float projection;
     private PlayerController player;
-
+    private Vector3 lookDir;
 
     public Transform firePoint;
     
     void Start()
     {
         player = gameObject.GetComponentInParent(typeof(PlayerController)) as PlayerController;
+
+        DelaySet();
     }
 
-    async void FixedUpdate(){
-
-        projection = Vector3.Dot(player.rb.velocity, (player.pointToLook - player.transform.position).normalized * fireRate) / fireRate;
-        delay = (bullet.transform.localScale.x + distanceBetweenShots)/(fireRate - projection);
+    void FixedUpdate(){
+        
         shotCounter += Time.fixedDeltaTime;
-
         if (delay < shotCounter){
             BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
             newBullet.speed = fireRate;
+            DelaySet();
             shotCounter = 0;
         }
+    }
+    void DelaySet(){
+        //Debug.Log(player.pointToLook);
+        lookDir = player.pointToLook - firePoint.position;
+        lookDir.y = firePoint.position.y;
+        Vector3 vel = player.rb.velocity;
+        vel.y = firePoint.position.y;
+        projection = Vector3.Dot(vel, lookDir.normalized * fireRate) / fireRate;
+        delay = (bullet.transform.localScale.x + distanceBetweenShots)/(fireRate - projection);
     }
 
 }

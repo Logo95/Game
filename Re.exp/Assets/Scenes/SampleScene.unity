@@ -885,7 +885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFiring: 0
   bullet: {fileID: 1600113512205134681, guid: 8d896f097c7c13642854e7b9d0b3dd67, type: 3}
-  fireRate: 45
+  fireRate: 60
   firePoint: {fileID: 2082654080}
 --- !u!1 &2082654079
 GameObject:
