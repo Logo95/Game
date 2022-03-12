@@ -7,7 +7,6 @@ public class BulletController : MonoBehaviour
     [HideInInspector] public float speed;
     private float ttl = 3f;
 
-
     void FixedUpdate()
     {
         if (ttl <= 0) Destroy(gameObject);
@@ -16,6 +15,6 @@ public class BulletController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Object.Destroy(gameObject);
+        Object.Destroy(gameObject); 
     }
 }

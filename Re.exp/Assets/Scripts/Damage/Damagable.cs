@@ -5,7 +5,7 @@ using UnityEngine;
 public class Damagable : MonoBehaviour
 {
     private int healthPoints = 100;
-
+    public bool type;
     public void DamageDeal(int _damageTaken)
     {
         if (healthPoints <= _damageTaken)

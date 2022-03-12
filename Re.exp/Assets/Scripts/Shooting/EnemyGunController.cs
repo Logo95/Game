@@ -7,8 +7,8 @@ public class EnemyGunController : MonoBehaviour
 
     public BulletController bullet;
 
-    public float fireRate;
-    private float distanceBetweenShots = 1.5f;
+    public float bulletSpeed;
+    public float distanceBetweenShots = 1.5f;
     private float shotCounter;
 
     private float delay;
@@ -18,6 +18,7 @@ public class EnemyGunController : MonoBehaviour
     private Rigidbody enemyRb;
 
     public Transform firePoint;
+    private Damager dm;
     
     void Start()
     {
@@ -31,7 +32,9 @@ public class EnemyGunController : MonoBehaviour
         shotCounter += Time.fixedDeltaTime;
         if (delay < shotCounter){
             BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
-            newBullet.speed = fireRate;
+            dm = newBullet.GetComponent<Damager>();
+            dm.type = false; 
+            newBullet.speed = bulletSpeed;
             DelaySet();
             shotCounter = 0;
         }
@@ -41,8 +44,8 @@ public class EnemyGunController : MonoBehaviour
         lookDir.y = firePoint.position.y;
         Vector3 vel = enemyRb.velocity;
         vel.y = firePoint.position.y;
-        projection = Vector3.Dot(vel, lookDir.normalized * fireRate) / fireRate;
-        delay = (bullet.transform.localScale.x + distanceBetweenShots)/(fireRate - projection);
+        projection = Vector3.Dot(vel, lookDir.normalized * bulletSpeed) / bulletSpeed;
+        delay = (bullet.transform.localScale.x + distanceBetweenShots)/(bulletSpeed - projection);
     }
 
 }
