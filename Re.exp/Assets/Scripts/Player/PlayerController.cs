@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = moveInput * moveSpeed;
     }
 
-    void MousePos(){
+    private void MousePos(){
         Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
         float rayLenght;

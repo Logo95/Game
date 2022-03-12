@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Damagable : MonoBehaviour
+{
+    private int healthPoints = 100;
+
+    public void DamageDeal(int _damageTaken)
+    {
+        if (healthPoints <= _damageTaken)
+        {
+            Die();
+        }
+        else
+        {
+            healthPoints -= _damageTaken;
+        }
+    }
+
+    private void Die(){
+        gameObject.SetActive(false);
+    }
+}
