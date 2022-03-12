@@ -5,7 +5,7 @@ using UnityEngine;
 public class Damager : MonoBehaviour
 {
    public int damage = 1;
-   private Damagable damagable;
+   private Damagable damagable = null;
    private void OnTriggerEnter(Collider other)
    {
       damagable = other.gameObject.GetComponent<Damagable>();

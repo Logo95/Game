@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    private Rigidbody rb;
+    [HideInInspector] public Rigidbody rb;
     private PlayerController player;
     private Vector3 directionToLook;
-    private Vector3 currentLookDirection;
+    [HideInInspector] public Vector3 currentLookDirection;
     public float rotationSpeed;
     private float angleToRotate;
+    private float enemyFOV = 20f;
 
     public float moveSpeed = 10f;
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
         rb = GetComponent<Rigidbody>();
-
+        player = FindObjectOfType<PlayerController>();
     }
 
     void FixedUpdate()
@@ -33,11 +33,12 @@ public class EnemyAI : MonoBehaviour
         Quaternion interpolatedDirection = Quaternion.Slerp(Quaternion.LookRotation(currentLookDirection),Quaternion.LookRotation(directionToLook), angleToRotate);
         Debug.Log("interpolatedDirection - " + interpolatedDirection);
         transform.rotation = interpolatedDirection;
+
     }
 
     void MoveDirection(){
         float angleToMove = Mathf.Acos(Vector3.Dot(currentLookDirection, directionToLook)/(currentLookDirection.magnitude * directionToLook.magnitude));
-        if((angleToMove < 20 * Mathf.Deg2Rad) || (currentLookDirection == directionToLook))
+        if((angleToMove < enemyFOV * Mathf.Deg2Rad) || (currentLookDirection == directionToLook))
         {
             rb.velocity = currentLookDirection * moveSpeed;
         } 
