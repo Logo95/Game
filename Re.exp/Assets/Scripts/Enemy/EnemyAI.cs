@@ -25,15 +25,11 @@ public class EnemyAI : MonoBehaviour
         MoveDirection();
     }
     void LookDirection(){
-        Debug.Log("currentLookDir - " + currentLookDirection);
         directionToLook = (player.transform.position - transform.position).normalized;
         currentLookDirection = transform.forward;
-        Debug.Log("pointToLook - " + directionToLook);
         angleToRotate = rotationSpeed / (directionToLook - currentLookDirection).magnitude;
         Quaternion interpolatedDirection = Quaternion.Slerp(Quaternion.LookRotation(currentLookDirection),Quaternion.LookRotation(directionToLook), angleToRotate);
-        Debug.Log("interpolatedDirection - " + interpolatedDirection);
         transform.rotation = interpolatedDirection;
-
     }
 
     void MoveDirection(){

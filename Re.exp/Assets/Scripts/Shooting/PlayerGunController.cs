@@ -14,7 +14,7 @@ public class PlayerGunController : ShootingController
 
     
     void Start()
-    {
+    {   
         player = gameObject.GetComponentInParent(typeof(PlayerController)) as PlayerController;
         DelaySet();
     }

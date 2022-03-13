@@ -6,9 +6,7 @@ public class BulletController : MonoBehaviour
 {
     [HideInInspector] public float speed;
     private float ttl = 3f;
-    Damager dm;
-
-        
+    protected Damager dm;
 
     void FixedUpdate()
     {

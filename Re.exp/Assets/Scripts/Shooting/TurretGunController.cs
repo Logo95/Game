@@ -13,7 +13,6 @@ public class TurretGunController : ShootingController
             foreach(Transform i in firePoints){
                 Shoot(i);
             }
-            
         }
     }
 }
