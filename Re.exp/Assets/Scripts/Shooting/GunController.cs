@@ -40,7 +40,7 @@ public class GunController : MonoBehaviour
             shotCounter = 0;
         }
     }
-    void DelaySet(){
+    private void DelaySet(){
         //Debug.Log(player.pointToLook);
         lookDir = player.pointToLook - firePoint.position;
         lookDir.y = firePoint.position.y;
