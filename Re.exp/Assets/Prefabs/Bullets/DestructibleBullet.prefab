@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -7741126847431241428}
   - component: {fileID: 7420449595190146191}
   m_Layer: 0
-  m_Name: DestructableBullet
+  m_Name: DestructibleBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
