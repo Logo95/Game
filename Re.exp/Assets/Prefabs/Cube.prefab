@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297043831813969742}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe048a9ff9d1104ea77a7b1439a52d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 100
   type: 0
 --- !u!1 &297043833082345110
 GameObject:
@@ -222,6 +223,8 @@ MonoBehaviour:
   bullet: {fileID: 1600113512205134681, guid: 8d896f097c7c13642854e7b9d0b3dd67, type: 3}
   bulletSpeed: 0
   distanceBetweenShots: 1.5
+  delay: 0
+  type: 0
   firePoint: {fileID: 297043831813969742}
 --- !u!1 &297043833333189117
 GameObject:
@@ -234,7 +237,6 @@ GameObject:
   - component: {fileID: 297043833333189114}
   - component: {fileID: 297043833333189113}
   - component: {fileID: 297043833333189112}
-  - component: {fileID: 297043833333189115}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -305,16 +307,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &297043833333189115
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297043833333189117}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

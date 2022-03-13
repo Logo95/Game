@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
 
     private Camera mainCamera;
 
-    public GunController gun;
 
     // Start is called before the first frame update
     void Start()

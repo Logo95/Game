@@ -7,10 +7,9 @@ public class BulletController : MonoBehaviour
     [HideInInspector] public float speed;
     private float ttl = 3f;
     Damager dm;
-    private void Start()
-    {
-        dm = GetComponent<Damager>();
-    }
+
+        
+
     void FixedUpdate()
     {
         if (ttl <= 0) Destroy(gameObject);
@@ -19,9 +18,17 @@ public class BulletController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(!(other.TryGetComponent(out Damagable dmble) && (dmble.type == dm.type)))
+        if(other.TryGetComponent(out Damagable dmble))
         {
-            Object.Destroy(gameObject); 
+            dm = GetComponent<Damager>();
+            if( dmble.type != dm.type)
+            {
+                Object.Destroy(gameObject);         
+            }
+        }
+        else
+        {
+            Object.Destroy(gameObject);
         }
     }
 }

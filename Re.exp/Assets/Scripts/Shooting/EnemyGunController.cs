@@ -2,23 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGunController : MonoBehaviour
+public class EnemyGunController : ShootingController
 {
-
-    public BulletController bullet;
-
-    public float bulletSpeed;
-    public float distanceBetweenShots = 1.5f;
-    private float shotCounter;
-
-    private float delay;
     private float projection;
+    public float distanceBetweenShots = 1.5f;
     private EnemyAI enemy;
     private Vector3 lookDir;
     private Rigidbody enemyRb;
 
     public Transform firePoint;
-    private Damager dm;
     
     void Start()
     {
@@ -31,12 +23,8 @@ public class EnemyGunController : MonoBehaviour
         
         shotCounter += Time.fixedDeltaTime;
         if (delay < shotCounter){
-            BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
-            dm = newBullet.GetComponent<Damager>();
-            dm.type = false; 
-            newBullet.speed = bulletSpeed;
+            Shoot(firePoint);
             DelaySet();
-            shotCounter = 0;
         }
     }
     void DelaySet(){

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971489302479311824}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971489302865910499}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 971489303179334648}
   - component: {fileID: 971489303179334651}
   - component: {fileID: 971489303179334629}
+  - component: {fileID: 5355034790864876420}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -175,14 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1
-  firePoints:
-  - {fileID: 971489304062610211}
-  - {fileID: 971489302479311824}
-  - {fileID: 971489302865910499}
-  - {fileID: 971489303234462159}
-  bullet: {fileID: 1600113512205134681, guid: 8d896f097c7c13642854e7b9d0b3dd67, type: 3}
-  delay: 0.1
-  bulletSpeed: 30
 --- !u!54 &971489303179334651
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -197,7 +190,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 94
   m_CollisionDetection: 0
 --- !u!114 &971489303179334629
 MonoBehaviour:
@@ -213,6 +206,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 100
   type: 0
+--- !u!114 &5355034790864876420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971489303179334650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960435f20171ef44c954b769e646d6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1600113512205134681, guid: 8d896f097c7c13642854e7b9d0b3dd67, type: 3}
+  bulletSpeed: 40
+  distanceBetweenShots: 1
+  delay: 0.1
+  type: 0
+  firePoints:
+  - {fileID: 971489304062610211}
+  - {fileID: 971489302479311824}
+  - {fileID: 971489302865910499}
+  - {fileID: 971489303234462159}
 --- !u!1 &971489303234462158
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971489303234462159}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971489304062610211}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

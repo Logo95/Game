@@ -789,6 +789,10 @@ PrefabInstance:
       propertyPath: bulletSpeed
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 297043833333189117, guid: ba0ccc17751734b4a811342dc0a3369e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0ccc17751734b4a811342dc0a3369e, type: 3}
 --- !u!1001 &1860507529
@@ -907,6 +911,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 297043832175293323, guid: ba0ccc17751734b4a811342dc0a3369e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 297043832175293325, guid: ba0ccc17751734b4a811342dc0a3369e, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -914,6 +922,10 @@ PrefabInstance:
     - target: {fileID: 297043833082345108, guid: ba0ccc17751734b4a811342dc0a3369e, type: 3}
       propertyPath: bulletSpeed
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 297043833333189117, guid: ba0ccc17751734b4a811342dc0a3369e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0ccc17751734b4a811342dc0a3369e, type: 3}
@@ -1028,6 +1040,10 @@ PrefabInstance:
     - target: {fileID: 7808522089728096043, guid: 0972d84b23cdf964bab7b5d913d4eed8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808522089728096045, guid: 0972d84b23cdf964bab7b5d913d4eed8, type: 3}
+      propertyPath: m_Constraints
+      value: 116
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0972d84b23cdf964bab7b5d913d4eed8, type: 3}
