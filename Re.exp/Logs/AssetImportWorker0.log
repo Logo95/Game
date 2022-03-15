@@ -1,123 +1,123 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19043) 64bit Professional' Language: 'ru' Physical Memory: 16319 MB
+OS: 'Windows 10  (10.0.19044) 64bit CoreSingleLanguage' Language: 'ru' Physical Memory: 16269 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-Y:\Programs\Unity\2020.3.25f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-Y:/Projects/UnityPr/Re.exp/Re.exp
+C:/Users/alex2/Desktop/Practice/Re.exp/Re.exp
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49984
-Successfully changed project path to: Y:/Projects/UnityPr/Re.exp/Re.exp
-Y:/Projects/UnityPr/Re.exp/Re.exp
+50700
+Successfully changed project path to: C:/Users/alex2/Desktop/Practice/Re.exp/Re.exp
+C:/Users/alex2/Desktop/Practice/Re.exp/Re.exp
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 28.85 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 56.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
-[Subsystems] Discovering subsystems at path Y:/Programs/Unity/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path Y:/Projects/UnityPr/Re.exp/Re.exp/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/alex2/Desktop/Practice/Re.exp/Re.exp/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f08)
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c8c)
     Vendor:   
-    VRAM:     5980 MB
-    Driver:   30.0.14.9676
+    VRAM:     4019 MB
+    Driver:   30.0.14.7168
 Initialize mono
-Mono path[0] = 'Y:/Programs/Unity/2020.3.25f1/Editor/Data/Managed'
-Mono path[1] = 'Y:/Programs/Unity/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'Y:/Programs/Unity/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56624
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56404
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: Y:/Programs/Unity/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000955 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003613 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 28.69 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 58.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.487 seconds
+- Completed reload, in  1.159 seconds
 Domain Reload Profiling:
-	ReloadAssembly (488ms)
-		BeginReloadAssembly (56ms)
+	ReloadAssembly (1159ms)
+		BeginReloadAssembly (180ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (374ms)
-			LoadAssemblies (56ms)
+		EndReloadAssembly (847ms)
+			LoadAssemblies (176ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (132ms)
+			SetupTypeCache (307ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (132ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (280ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (29ms)
-				BeforeProcessingInitializeOnLoad (7ms)
-				ProcessInitializeOnLoadAttributes (68ms)
-				ProcessInitializeOnLoadMethodAttributes (24ms)
+				RefreshPlugins (58ms)
+				BeforeProcessingInitializeOnLoad (26ms)
+				ProcessInitializeOnLoadAttributes (143ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003240 seconds.
+Registered in 0.008218 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.27 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.863 seconds
+- Completed reload, in  1.916 seconds
 Domain Reload Profiling:
-	ReloadAssembly (864ms)
-		BeginReloadAssembly (130ms)
+	ReloadAssembly (1917ms)
+		BeginReloadAssembly (261ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (687ms)
-			LoadAssemblies (84ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (1522ms)
+			LoadAssemblies (158ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (239ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (264ms)
+			SetupTypeCache (526ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (85ms)
+			SetupLoadedEditorAssemblies (605ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (45ms)
-				ProcessInitializeOnLoadAttributes (204ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (159ms)
+				ProcessInitializeOnLoadAttributes (412ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (12ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 1.18 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1659 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.3 MB.
-System memory in use after: 74.3 MB.
+System memory in use before: 74.0 MB.
+System memory in use after: 74.1 MB.
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2093.
-Total: 2.493100 ms (FindLiveObjects: 0.127000 ms CreateObjectMapping: 0.055900 ms MarkObjects: 2.255000 ms  DeleteObjects: 0.054700 ms)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2091.
+Total: 3.826900 ms (FindLiveObjects: 0.235600 ms CreateObjectMapping: 0.104400 ms MarkObjects: 3.400800 ms  DeleteObjects: 0.084400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,96 +131,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Models/ship.fbx
-  artifactKey: Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ship.fbx using Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b7e41162f51cc65d413758bd573b98') in 0.165807 seconds 
-  Import took 0.168027 seconds .
+  path: Assets/Prefabs/Player Variant.prefab
+  artifactKey: Guid(ab99d6dcf6ec6da45929b4065e89487d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player Variant.prefab using Guid(ab99d6dcf6ec6da45929b4065e89487d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c69b957cf872180c2ff5dc6b724864c') in 0.198409 seconds 
+  Import took 0.203577 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Models/shipcollider.fbx
-  artifactKey: Guid(9a3eec482da75f34aa0a5d9c1497ac93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/shipcollider.fbx using Guid(9a3eec482da75f34aa0a5d9c1497ac93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df5409f96d83b34f11b5cc09c4a0b75a') in 0.030871 seconds 
-  Import took 0.033104 seconds .
+  Time since last request: 3.342970 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(ab99d6dcf6ec6da45929b4065e89487d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(ab99d6dcf6ec6da45929b4065e89487d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '903954f9e1063a566cef0d9a63fc0531') in 0.041954 seconds 
+  Import took 0.048992 seconds .
 
-========================================================================
-Received Import Request.
-  Time since last request: 107.279860 seconds.
-  path: Assets/Models/ship1.fbx
-  artifactKey: Guid(4d255a865aa2af143aefe2a446c74ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ship1.fbx using Guid(4d255a865aa2af143aefe2a446c74ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e458a630d028c98f72c7a9aa3b18c84') in 0.051483 seconds 
-  Import took 0.054426 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/Models/shipcollider1.fbx
-  artifactKey: Guid(e0e6262068ea6f34ebefd560b5a163de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/shipcollider1.fbx using Guid(e0e6262068ea6f34ebefd560b5a163de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a8fdf81e143de36f190b7e7f8a9cb63') in 0.032879 seconds 
-  Import took 0.034959 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 130.639786 seconds.
-  path: Assets/Models/ship.fbx
-  artifactKey: Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ship.fbx using Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '451ce264f56b10183a72ef77ad5bfbec') in 0.063546 seconds 
-  Import took 0.065775 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000130 seconds.
-  path: Assets/Models/shipcollider.fbx
-  artifactKey: Guid(9a3eec482da75f34aa0a5d9c1497ac93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/shipcollider.fbx using Guid(9a3eec482da75f34aa0a5d9c1497ac93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af5f299681eee9aad51442c4279e8412') in 0.028858 seconds 
-  Import took 0.030918 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 163.103880 seconds.
-  path: Assets/Models/ship.fbx
-  artifactKey: Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ship.fbx using Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f84424e0f2ebc2ceb149eeb8b5c7dcdd') in 0.031821 seconds 
-  Import took 0.034279 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 102.881979 seconds.
-  path: Assets/Models/ship.fbx
-  artifactKey: Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ship.fbx using Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '185326677d96ff4fce6d8e29b84d6c47') in 0.021880 seconds 
-  Import took 0.024271 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 71.616082 seconds.
-  path: Assets/Models/ship.fbx
-  artifactKey: Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ship.fbx using Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccf2c87cccaaa7d55322965b060d6524') in 0.043705 seconds 
-  Import took 0.046051 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 287.870465 seconds.
-  path: Assets/Models/shipandcol.fbx
-  artifactKey: Guid(8e5b76b7570a18140b00007e7fe93e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/shipandcol.fbx using Guid(8e5b76b7570a18140b00007e7fe93e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aac20b64a1b01b30102b0f04db4eb72') in 0.066142 seconds 
-  Import took 0.068829 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 128.788089 seconds.
-  path: Assets/Models/ship.fbx
-  artifactKey: Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ship.fbx using Guid(bd432b39acd6b35448c39e952f905a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf189ec4d2fcdaa113acf766a5889335') in 0.086117 seconds 
-  Import took 0.088634 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 66.281165 seconds.
-  path: Assets/Models/collider.fbx
-  artifactKey: Guid(eb266105826b02c4c8279c36cbdccab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/collider.fbx using Guid(eb266105826b02c4c8279c36cbdccab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47f6532c56322657a8ffd927771e8a74') in 0.036452 seconds 
-  Import took 0.038643 seconds .
-
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
