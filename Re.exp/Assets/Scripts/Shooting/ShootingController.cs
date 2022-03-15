@@ -7,14 +7,23 @@ public class ShootingController : MonoBehaviour
     [SerializeField] public List<BulletController> bullets;
     [SerializeField] public List<Transform> firePoints;
     public float bulletSpeed;
-    [SerializeField] public List<float> shotCounter;
-    [SerializeField] public List<float> delays;
+    public List<float> shotCounter;
+    public List<float> delays;
     protected Damager dm;
     public bool type;
     private Vector3 lookDir;
     private float projection;
     public float distanceBetweenShots = 1.5f;
-
+    private void Start()
+    {
+        shotCounter = new List<float>();
+        delays = new List<float>();
+        for(int i = 0; i < firePoints.Count;i++)
+        {
+            shotCounter.Add(0);
+            delays.Add(0);
+        }
+    }
     protected void Shoot(int _firePoint = 0, int _bullet = 0){
         BulletController newBullet = Instantiate(bullets[_bullet], firePoints[_firePoint].position, firePoints[_firePoint].rotation) as BulletController;
         dm = newBullet.GetComponent<Damager>();
@@ -30,5 +39,4 @@ public class ShootingController : MonoBehaviour
         delays[_firePoint] = (bullets[_bullet].transform.localScale.x + distanceBetweenShots)/(bulletSpeed - projection);
     }
 
-    
 }
