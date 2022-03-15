@@ -26,7 +26,18 @@ public class BulletController : MonoBehaviour
         }
         else
         {
-            Object.Destroy(gameObject);
+            if(other.TryGetComponent(out Damager otherDm))
+            {
+                dm = GetComponent<Damager>();
+                if( otherDm.type != dm.type)
+                {
+                   Object.Destroy(gameObject);         
+                }
+            }
+            else
+            {
+                Object.Destroy(gameObject);
+            }
         }
     }
 }

@@ -5,35 +5,22 @@ using UnityEngine;
 public class PlayerGunController : ShootingController
 {
 
-    private float projection;
-    public float distanceBetweenShots = 1.5f;
-    private PlayerController player;
-    private Vector3 lookDir;
-    public Transform firePoint;
 
-
-    
+    [SerializeField] private PlayerController player;
     void Start()
     {   
-        player = gameObject.GetComponentInParent(typeof(PlayerController)) as PlayerController;
-        DelaySet();
+        DelaySet(player.rb);
     }
 
     void FixedUpdate(){
         
-        shotCounter += Time.fixedDeltaTime;
-        if (delay < shotCounter){
-            Shoot(firePoint);
-            DelaySet();
+        shotCounter[0] += Time.fixedDeltaTime;
+        if (delays[0] < shotCounter[0]){
+            Shoot();
+            DelaySet(player.rb);
+            shotCounter[0] = 0;
         }
     }
-    private void DelaySet(){
-        lookDir = player.pointToLook - firePoint.position;
-        lookDir.y = firePoint.position.y;
-        Vector3 vel = player.rb.velocity;
-        vel.y = firePoint.position.y;
-        projection = Vector3.Dot(vel, lookDir.normalized * bulletSpeed) / bulletSpeed;
-        delay = (bullet.transform.localScale.x + distanceBetweenShots)/(bulletSpeed - projection);
-    }
+
 
 }

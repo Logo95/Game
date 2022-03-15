@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
-  rb: {fileID: 0}
+  rb: {fileID: 7808522089728096045}
   pointToLook: {x: 0, y: 0, z: 0}
 --- !u!114 &7808522089728096044
 MonoBehaviour:
@@ -314,9 +314,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3d2432478059b4da1752f74cf0bc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1600113512205134681, guid: 8d896f097c7c13642854e7b9d0b3dd67, type: 3}
+  bullets:
+  - {fileID: 1600113512205134681, guid: 8d896f097c7c13642854e7b9d0b3dd67, type: 3}
+  firePoints:
+  - {fileID: 7808522090501914953}
   bulletSpeed: 60
   delay: 0
   type: 1
   distanceBetweenShots: 1.5
-  firePoint: {fileID: 7808522090501914953}
+  player: {fileID: 7808522089728096042}
