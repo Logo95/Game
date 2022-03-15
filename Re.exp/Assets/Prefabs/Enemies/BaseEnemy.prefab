@@ -225,7 +225,10 @@ MonoBehaviour:
   firePoints:
   - {fileID: 297043831813969742}
   bulletSpeed: 40
-  delay: 0
+  shotCounter:
+  - 0
+  delays:
+  - 0
   type: 0
   distanceBetweenShots: 1.5
 --- !u!1 &297043833333189117

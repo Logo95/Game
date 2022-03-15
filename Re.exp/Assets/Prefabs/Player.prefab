@@ -319,7 +319,10 @@ MonoBehaviour:
   firePoints:
   - {fileID: 7808522090501914953}
   bulletSpeed: 60
-  delay: 0
+  shotCounter:
+  - 0
+  delays:
+  - 0
   type: 1
   distanceBetweenShots: 1.5
   player: {fileID: 7808522089728096042}
