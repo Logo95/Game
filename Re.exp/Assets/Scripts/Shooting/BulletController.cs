@@ -7,6 +7,7 @@ public class BulletController : MonoBehaviour
     [HideInInspector] public float speed;
     private float ttl = 3f;
     protected Damager dm;
+    public ObjectType objectType;
 
     void FixedUpdate()
     {
@@ -16,28 +17,27 @@ public class BulletController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.TryGetComponent(out Damagable dmble))
+        if(other.TryGetComponent(out ObjectType otherObjectType))
         {
-            dm = GetComponent<Damager>();
-            if( dmble.type != dm.type)
+            objectType = GetComponent<ObjectType>();
+            if(objectType.essence != otherObjectType.essence)
             {
-                Object.Destroy(gameObject);         
+                if(otherObjectType.type != ObjectType.Type.Bullet)
+                {
+                    Object.Destroy(gameObject);
+                }
+                else
+                {
+                    if(!TryGetComponent(out Damagable otherDmble))
+                    {
+                        Object.Destroy(gameObject);
+                    }
+                }         
             }
         }
         else
         {
-            if(other.TryGetComponent(out Damager otherDm))
-            {
-                dm = GetComponent<Damager>();
-                if( otherDm.type != dm.type)
-                {
-                   Object.Destroy(gameObject);         
-                }
-            }
-            else
-            {
-                Object.Destroy(gameObject);
-            }
+            Object.Destroy(gameObject); 
         }
     }
 }

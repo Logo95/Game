@@ -6,18 +6,21 @@ public class Damager : MonoBehaviour
 {
    public int damage = 1;
    private Damagable damagable = null;
-   public bool type;
+   public ObjectType objectType;
+   private void Start()
+   {
+      objectType = GetComponent<ObjectType>();
+   }
    private void OnTriggerEnter(Collider other)
    {
-      Debug.Log(1);
       damagable = other.gameObject.GetComponent<Damagable>();
-      if ((damagable != null) && (damagable.type != type)){
+      if ((damagable != null) && (damagable.objectType.essence != objectType.essence)){
          damagable.DamageDeal(damage);
       }
    }
    private void OnCollisionEnter(Collision other){
       damagable = other.gameObject.GetComponent<Damagable>();
-      if ((damagable != null) && (damagable.type != type))
+      if ((damagable != null) && (damagable.objectType.essence != objectType.essence))
       damagable.DamageDeal(damage);
    }
 

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -8836193892040521333}
   - component: {fileID: -7741126847431241428}
   - component: {fileID: 7420449595190146191}
+  - component: {fileID: 3582489851565574775}
   m_Layer: 0
   m_Name: DestructibleBullet
   m_TagString: Untagged
@@ -112,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  type: 0
+  objectType: {fileID: 3582489851565574775}
 --- !u!54 &-8836193892040521333
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  objectType: {fileID: 3582489851565574775}
 --- !u!114 &7420449595190146191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,4 +157,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 3
-  type: 0
+  objectType: {fileID: 3582489851565574775}
+--- !u!114 &3582489851565574775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7437152285514657997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db885235c3c9c84b979f30c5c7cfe4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  essence: 0
+  type: 2
+  objName: Destuctible Bullet
+  description: Destuctible Bullet

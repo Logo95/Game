@@ -6,29 +6,16 @@ public class PlayerController : MonoBehaviour
 {
      public float moveSpeed;
     public Rigidbody rb;
-
     private Vector3 moveInput;
     private Vector3 moveVelocity;
     [HideInInspector] public Vector3 pointToLook;
-
     private Camera mainCamera;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         mainCamera = FindObjectOfType<Camera>();
     }
-
-    void Update(){
-        // if (Input.GetMouseButtonDown(0))
-        //     gun.isFiring = true;
-
-        // if (Input.GetMouseButtonUp(0))
-        //     gun.isFiring = false;
-    }
-
 
     void FixedUpdate(){
         moveInput = new Vector3 (Input.GetAxisRaw("Horizontal"), 0f , Input.GetAxisRaw("Vertical"));

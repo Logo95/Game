@@ -5,7 +5,13 @@ using UnityEngine;
 public class Damagable : MonoBehaviour
 {
     public int healthPoints = 100;
-    public bool type;
+   public ObjectType objectType;
+
+    private void Start()
+    {
+      objectType = GetComponent<ObjectType>();
+    }
+
     public void DamageDeal(int _damageTaken)
     {
         if (healthPoints <= _damageTaken)

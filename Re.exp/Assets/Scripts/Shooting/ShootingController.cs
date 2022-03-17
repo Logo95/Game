@@ -10,24 +10,26 @@ public class ShootingController : MonoBehaviour
     public List<float> shotCounter;
     public List<float> delays;
     protected Damager dm;
-    public bool type;
+    [HideInInspector] public ObjectType objectType;
     private Vector3 lookDir;
     private float projection;
     public float distanceBetweenShots = 1.5f;
+
     private void Start()
     {
-        shotCounter = new List<float>();
-        delays = new List<float>();
-        for(int i = 0; i < firePoints.Count;i++)
-        {
-            shotCounter.Add(0);
-            delays.Add(0);
-        }
+        objectType = GetComponent<ObjectType>();
+        // shotCounter = new List<float>();
+        // delays = new List<float>();
+        // for(int i = 0; i < firePoints.Count;i++)
+        // {
+        //     shotCounter.Add(0);
+        //     delays.Add(0);
+        // }
     }
     protected void Shoot(int _firePoint = 0, int _bullet = 0){
         BulletController newBullet = Instantiate(bullets[_bullet], firePoints[_firePoint].position, firePoints[_firePoint].rotation) as BulletController;
         dm = newBullet.GetComponent<Damager>();
-        dm.type = type; 
+        dm.objectType.essence = objectType.essence;
         newBullet.speed = bulletSpeed;
     }
     public void DelaySet(Rigidbody rb, int _firePoint = 0, int _bullet = 0){
