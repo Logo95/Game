@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  objectType: {fileID: 0}
+  objectType: {fileID: 1612113265315418689}
 --- !u!114 &1612113265315418689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 100
-  objectType: {fileID: 0}
+  objectType: {fileID: 1612113265315418689}
 --- !u!54 &1612113265315418688
 Rigidbody:
   m_ObjectHideFlags: 0

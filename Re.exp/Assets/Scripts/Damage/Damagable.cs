@@ -9,7 +9,7 @@ public class Damagable : MonoBehaviour
 
     private void Start()
     {
-      objectType = GetComponent<ObjectType>();
+        objectType = GetComponent<ObjectType>();
     }
 
     public void DamageDeal(int _damageTaken)

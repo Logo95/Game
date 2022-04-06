@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1723875897768158120}
   - component: {fileID: 1723875897768158119}
   - component: {fileID: 1723875897768158124}
-  - component: {fileID: 1723875897768158125}
+  - component: {fileID: 568495368281053017}
   m_Layer: 0
   m_Name: Miner
   m_TagString: Untagged
@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 0.03
+  enemyFOV: 20
   moveSpeed: 28
   path: []
   mine: {fileID: 1612113265315418694, guid: 39446b3eb555ccb49980d3c815ffcb58, type: 3}
@@ -131,7 +132,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1723875897768158125
+--- !u!114 &568495368281053017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
