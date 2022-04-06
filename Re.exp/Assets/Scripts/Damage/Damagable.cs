@@ -25,6 +25,27 @@ public class Damagable : MonoBehaviour
     }
 
     private void Die(){
-        ObjectType.Destroy(gameObject);
+        
+        switch (objectType.type)
+        {
+            case (ObjectType.Type.EnemyMob):
+            {
+                //enemy die event
+                ObjectType.Destroy(gameObject);
+                break;
+            }
+            case (ObjectType.Type.Player):
+            {
+                //player die event
+                gameObject.SetActive(false);
+                break;
+            }
+            default:
+            {
+                ObjectType.Destroy(gameObject);
+                break;
+            }
+        }
+
     }
 }
