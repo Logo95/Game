@@ -8,9 +8,11 @@ public class WaveSpawner : MonoBehaviour
     private int currentEnemyIndex;
     private int currentWaveIndex;
     private int enemiesLeftToSpawn;
+    private PlayerController player;
 
     private void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         enemiesLeftToSpawn = waves[0].WaveSetting.Length;
         StartWave();
     }
@@ -22,7 +24,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(waves[currentWaveIndex].WaveSetting[currentEnemyIndex].SpawnDelay);
             Instantiate(waves[currentWaveIndex].WaveSetting[currentEnemyIndex].Enemy,
                         waves[currentWaveIndex].WaveSetting[currentEnemyIndex].Spawner.transform.position,
-                        Quaternion.identity);
+                        Quaternion.LookRotation(player.transform.position - waves[currentWaveIndex].WaveSetting[currentEnemyIndex].Spawner.transform.position));
             enemiesLeftToSpawn--;
             currentEnemyIndex++;
             StartWave();
