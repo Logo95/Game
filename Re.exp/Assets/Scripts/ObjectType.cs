@@ -7,9 +7,10 @@ public class ObjectType: MonoBehaviour
     public enum Type
     {
         Player,
-        Enemy,
+        EnemyMob,
         Bullet,
-        Obstacle
+        Obstacle,
+        Mine 
     }
 
     public enum Essence
@@ -18,9 +19,12 @@ public class ObjectType: MonoBehaviour
         Ally,
         Neutral
     }
+
+    
     public Essence essence;
     public Type type;
     public string objName;
     public string description;
+
 
 }

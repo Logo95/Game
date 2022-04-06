@@ -25,6 +25,6 @@ public class Damagable : MonoBehaviour
     }
 
     private void Die(){
-        gameObject.SetActive(false);
+        ObjectType.Destroy(gameObject);
     }
 }
