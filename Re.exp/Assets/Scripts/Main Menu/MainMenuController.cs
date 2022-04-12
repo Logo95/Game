@@ -34,7 +34,7 @@ public class MainMenuController : MonoBehaviour
     }
     public void Exit()
 	{
-		Application.Quit ();
+		Application.Quit();
         
 	}
 }

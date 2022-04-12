@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelController : MonoBehaviour
+public class LevelOverlayController : MonoBehaviour
 {
     [SerializeField] private GameObject pauseCanvas;
     [SerializeField] private GameObject gameOverCanvas;
@@ -12,20 +12,22 @@ public class LevelController : MonoBehaviour
     private const int COUNTDOWN_TIME = 3;
     private Text countdownText;
     private bool over = false;
-    private int counter;
+    private int counter = 0;
     void Awake()
     {
-       pauseCanvas.SetActive(false);
-       gameOverCanvas.SetActive(false);
-       countdownCanvas.SetActive(false);
-       countdownText = countdownCanvas.GetComponentInChildren<Text>();
+        pauseCanvas.SetActive(false);
+        gameOverCanvas.SetActive(false);
+        countdownCanvas.SetActive(false);
+        countdownText = countdownCanvas.GetComponentInChildren<Text>();
+        StopGame();
+        StartCountdownTimer();
     }
 
     void Update()
     {
-        PauseController();
+        checkForPause();
     }
-    private void PauseController()
+    private void checkForPause()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !over && (counter == 0)) // counter проверяю, чтобы нельзя было нажать паузу во время отсчета или обновить таймер 
         {
@@ -38,26 +40,36 @@ public class LevelController : MonoBehaviour
             }
         }
     }
-    public void onBtnMainMenu()
+    private void StopGame()
+    {
+        Time.timeScale = 0;
+    }
+    private void StartGame()
     {
         Time.timeScale = 1;
+    }
+    public void onBtnMainMenu()
+    {
         SceneManager.LoadScene("Menu");
     }
     public void PauseGame()
     {
         pauseCanvas.SetActive(true);
-        Time.timeScale = 0;
+        StopGame();
     }
     public void UnPauseGame()
     {
-        counter = COUNTDOWN_TIME;
-        pauseCanvas.SetActive(false);
-        countdownCanvas.SetActive(true);
-        StartCoroutine(Timer1());
-
         
+        pauseCanvas.SetActive(false);
+        StartCountdownTimer();  
     }
-    private IEnumerator Timer1()
+    public void StartCountdownTimer()
+    {
+        counter = COUNTDOWN_TIME;
+        countdownCanvas.SetActive(true);
+        StartCoroutine(CountdownTimer());
+    }
+    private IEnumerator CountdownTimer()
     {
         while(counter > 0){
             countdownText.text = counter.ToString();
@@ -65,18 +77,11 @@ public class LevelController : MonoBehaviour
             counter--;
         }
         countdownCanvas.SetActive(false);
-        Time.timeScale = 1;
+        StartGame();
     }
-    private void Timer(float sec)
+    public void onGameOver()
     {
-        for(float timeStamp = Time.realtimeSinceStartup + sec;timeStamp > Time.realtimeSinceStartup;)
-        {
-
-        } 
-    }
-    public void GameOver()
-    {
-        
+        StopGame();
         //проверить кто выиграл и в зависимости от этого вывести нужный текст
         /*
         Text gameOverText = gameOverCanvas.GetComponentInChildren<Text>();
@@ -92,11 +97,10 @@ public class LevelController : MonoBehaviour
         
         pauseCanvas.SetActive(false);
         gameOverCanvas.SetActive(true);
-        Time.timeScale = 0;
+        
     }
     public void onBtnRestart()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

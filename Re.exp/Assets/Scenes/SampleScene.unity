@@ -723,7 +723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2101581901876599227, guid: ab53535fe75f5e1438e4772d3c46e0de, type: 3}
       propertyPath: m_Name
-      value: LevelController
+      value: LevelOverlayController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab53535fe75f5e1438e4772d3c46e0de, type: 3}
