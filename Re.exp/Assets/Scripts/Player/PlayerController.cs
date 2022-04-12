@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         mainCamera = FindObjectOfType<Camera>();
     }
 
-    void FixedUpdate(){
+    private void FixedUpdate(){
         moveInput = new Vector3 (Input.GetAxisRaw("Horizontal"), 0f , Input.GetAxisRaw("Vertical"));
         moveInput.Normalize();
         MousePos();

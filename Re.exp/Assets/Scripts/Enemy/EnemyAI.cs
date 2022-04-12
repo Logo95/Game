@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         LookDirection();
         MoveDirection();

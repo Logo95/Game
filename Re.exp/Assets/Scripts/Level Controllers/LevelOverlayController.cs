@@ -9,23 +9,26 @@ public class LevelOverlayController : MonoBehaviour
     [SerializeField] private GameObject pauseCanvas;
     [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private GameObject countdownCanvas;
+    [SerializeField] private GameObject HUDCanvas;
     private const int COUNTDOWN_TIME = 3;
     private Text countdownText;
     private bool over = false;
     private int counter = 0;
     void Awake()
     {
+        StopGame();
         pauseCanvas.SetActive(false);
         gameOverCanvas.SetActive(false);
         countdownCanvas.SetActive(false);
+        HUDCanvas.SetActive(true);
         countdownText = countdownCanvas.GetComponentInChildren<Text>();
-        StopGame();
         StartCountdownTimer();
     }
 
     void Update()
     {
         checkForPause();
+        
     }
     private void checkForPause()
     {
