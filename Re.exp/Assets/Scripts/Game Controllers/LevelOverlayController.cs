@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelOverlayController : MonoBehaviour
 {
@@ -10,13 +10,14 @@ public class LevelOverlayController : MonoBehaviour
     [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private GameObject countdownCanvas;
     [SerializeField] private GameObject HUDCanvas;
+    [SerializeField] private GameController gameController;
     private const int COUNTDOWN_TIME = 3;
     private Text countdownText;
     private bool over = false;
     private int counter = 0;
-    void Awake()
+    void Start()
     {
-        StopGame();
+        gameController.StopGame();
         pauseCanvas.SetActive(false);
         gameOverCanvas.SetActive(false);
         countdownCanvas.SetActive(false);
@@ -43,22 +44,15 @@ public class LevelOverlayController : MonoBehaviour
             }
         }
     }
-    private void StopGame()
-    {
-        Time.timeScale = 0;
-    }
-    private void StartGame()
-    {
-        Time.timeScale = 1;
-    }
+   
     public void onBtnMainMenu()
     {
-        SceneManager.LoadScene("Menu");
+       gameController.GoToScene("Menu");
     }
     public void PauseGame()
     {
         pauseCanvas.SetActive(true);
-        StopGame();
+        gameController.StopGame();
     }
     public void UnPauseGame()
     {
@@ -80,11 +74,11 @@ public class LevelOverlayController : MonoBehaviour
             counter--;
         }
         countdownCanvas.SetActive(false);
-        StartGame();
+        gameController.StartGame();
     }
     public void onGameOver()
     {
-        StopGame();
+        gameController.StopGame();
         //проверить кто выиграл и в зависимости от этого вывести нужный текст
         /*
         Text gameOverText = gameOverCanvas.GetComponentInChildren<Text>();
@@ -100,10 +94,13 @@ public class LevelOverlayController : MonoBehaviour
         
         pauseCanvas.SetActive(false);
         gameOverCanvas.SetActive(true);
-        
     }
     public void onBtnRestart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameController.GoToScene(SceneManager.GetActiveScene().name);
+    }
+    public void onBtnNextLevel()
+    {
+        gameController.GoToNextScene();
     }
 }
