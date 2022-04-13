@@ -9,6 +9,10 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 0;
     }
+    public void SetTimeScale(float _timeScale)
+    {
+        Time.timeScale = _timeScale;
+    }
     public void StartGame()
     {
         Time.timeScale = 1;
